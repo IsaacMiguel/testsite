@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/new") New
+  table
+    tr
+      th N
+      th Name
+      th Age
+      th Options
+    - persons.forEach(function(v,i){
+    tr
+      td=i
+      td=v.name
+      td #{v.age} years
+      td
+        a(href="/edit/"+v._id) Edit
+        | 
+        a(href="/delete/"+v._id) Delete
+    - });
