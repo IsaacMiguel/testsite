@@ -2,7 +2,9 @@ extends layout
 
 block content
   h1= title
-  a(href="/new") New
+  p=JSON.stringify(flashmsg)
+  p
+    a(href="/new") New
   table
     tr
       th N
